@@ -1,8 +1,17 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { EmptyLayout } from '@/components/common/layouts'
+import { AppPropsWithLayout } from '../models'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  console.log('App re-render')
+
+  const Layout = Component.Layout ?? EmptyLayout
+
+  return <div>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </div>
 }
 
 export default MyApp
