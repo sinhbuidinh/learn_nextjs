@@ -1,6 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import httpProxy from 'http-proxy'
+import Cookies from 'cookies'
 
 export const config = {
   api: {
@@ -15,6 +16,13 @@ export default function handler(
   res: NextApiResponse<any>
 ) {
   return new Promise((resolve) => {
+    //convert cookie to header auth before call
+    const cookies = new Cookies(req, res)
+    const token = cookies.get('access_token')
+    if (token) {
+      req.headers.Authorization = `Bearer ${token}`
+    }
+
     //remove cookie dont send to api server
     req.headers.cookie = ''
 
