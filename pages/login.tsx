@@ -1,5 +1,5 @@
-import { authApi } from '@/api';
-import * as React from 'react';
+import { authApi } from '@/api'
+import * as React from 'react'
 
 export default function LoginPage () {
   async function handleLoginClick() {
