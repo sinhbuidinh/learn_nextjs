@@ -17,7 +17,8 @@
     "paths": {
       "@/components/*": ["./components/*"],
       "@/models": ["./models"],
-      "@/api": ["./api-client"]
+      "@/api": ["./api-client"],
+      "@/hooks": ["./hooks"]
     },
     "incremental": true
   },

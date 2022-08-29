@@ -1,27 +1,23 @@
 import { authApi } from '@/api'
+import { useAuth } from '@/hooks'
 import * as React from 'react'
 
 export default function LoginPage () {
+  const { profile, login, logout } = useAuth({
+    revalidateOnMount: false, // when begin profile not load profile by swr
+  })
+
   async function handleLoginClick() {
     try {
-      await authApi.login({
-        username: 'sinh-test-login',
-        password: 'password-test'
-      })
+      await login()
     } catch (err) {
       console.error('Fail to login', err)
     }
   }
-  async function handleGetProfileClick() {
-    try {
-      await authApi.getProfile()
-    } catch (err) {
-      console.error('Fail to get profile', err)
-    }
-  }
+
   async function handleLogoutClick() {
     try {
-      await authApi.logout()
+      await logout()
     } catch (err) {
       console.error('Fail to logout', err)
     }
@@ -31,8 +27,9 @@ export default function LoginPage () {
     <div>
       <h1>Login Page</h1>
 
+      <p>Profile: {JSON.stringify(profile || {}, null, 4)}</p>
+
       <button onClick={handleLoginClick}>Login</button>
-      <button onClick={handleGetProfileClick}>Get profile</button>
       <button onClick={handleLogoutClick}>Logout</button>
     </div>
   );
