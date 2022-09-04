@@ -1,10 +1,8 @@
-import * as React from 'react';
+import { Box } from '@mui/system'
+import * as React from 'react'
 
-export interface HeaderProps {
-}
-
-export default function Header (props: HeaderProps) {
+export function Header() {
   return (
-    <div className="header">Header</div>
+    <Box component="header" py={2} textAlign="center">Header</Box>
   );
 }
