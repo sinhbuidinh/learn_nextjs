@@ -1,6 +1,6 @@
 import { Footer, Header } from '@/components/common'
 import { LayoutProps } from '@/models'
-import { Stack } from '@mui/material'
+import { Container, Stack } from '@mui/material'
 import { Box } from '@mui/system'
 import Link from 'next/link'
 
@@ -10,6 +10,8 @@ export function MainLayout ({ children }: LayoutProps) {
       <Header />
 
       <Box component="main" flexGrow={1}>
+        <Container maxWidth="sm" sx={{ bgcolor: 'primary.main' }}>SM Container</Container>
+        <Container sx={{ bgcolor: 'primary.main' }}>MD Container</Container>
         <Link href="/">
           <a>Home</a>
         </Link>
