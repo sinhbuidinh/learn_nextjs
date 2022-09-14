@@ -19,6 +19,7 @@
       "@/hooks": ["./hooks"],
       "@/models": ["./models"],
       "@/api": ["./api-client"],
+      "@/images/*": ["./images/*"],
       "@/utils": ["./utils"]
     },
     "incremental": true

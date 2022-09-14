@@ -12,6 +12,7 @@ export const theme = createTheme({
     },
     secondary: {
       main: '#19857b',
+      light: '#EDF7FA'
     },
     error: {
       main: red.A400,
@@ -52,6 +53,19 @@ export const theme = createTheme({
           },
         }
       }
+    },
+    MuiButton: {
+      variants: [
+        {
+          props: {
+            variant: 'contained',
+            color: 'primary'
+          },
+          style: {
+            color: 'white'
+          }
+        }
+      ]
     }
   }
 })
