@@ -1,10 +1,19 @@
 import { authApi } from '@/api'
+import { ProfileProps } from 'models/auth';
 import useSWR from 'swr'
 import { PublicConfiguration } from 'swr/dist/types'
 
-const ONE_HOUR_MS = 60 * 60 * 1000;
+const ONE_HOUR_MS = 60 * 60 * 1000
 
-export function useAuth(options?: Partial<PublicConfiguration>) {
+interface AuthReturnInterface {
+  firstLoading:boolean,
+  profile: ProfileProps|any,
+  error: null|Error,
+  login: any,
+  logout: any
+}
+
+export function useAuth(options?: Partial<PublicConfiguration>): AuthReturnInterface {
   const { data: profile, error, mutate } = useSWR('/profile', {
     dedupingInterval: ONE_HOUR_MS,//6s
     revalidateOnFocus: false,
