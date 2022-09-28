@@ -30,12 +30,13 @@ export function WorkCard ({ work }: IWorkCardProps) {
           width={246}
           height={180}
           layout="responsive"
+          loading="lazy"
           alt={`work image ${tagListStr}`}
         />
       </Box>
 
       <Box>
-        <Typography variant="h4" fontWeight="bold">{work.title}</Typography>
+        <Typography variant="h3" fontWeight="bold">{work.title}</Typography>
         <Stack
           direction="row"
           my={2}
@@ -53,6 +54,9 @@ export function WorkCard ({ work }: IWorkCardProps) {
           >{tagListStr}</Typography>
         </Stack>
         <Typography>{work.shortDescription}</Typography>
+        {(work.reference) ? (
+          <Typography mt={2}>{work.reference}</Typography>
+        ) : ''}
       </Box>
     </Stack>
   );

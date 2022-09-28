@@ -7,4 +7,5 @@ export interface Work {
   thumbnailUrl: string
   createdAt: string
   updatedAt: string
+  reference: string|null
 }

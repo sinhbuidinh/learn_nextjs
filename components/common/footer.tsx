@@ -6,10 +6,10 @@ import * as React from 'react'
 export function Footer() {
   const currentYear = new Date().getFullYear()
   const socialLinks = [
-    { icon: Facebook, url: 'https://facebook.com' },
-    { icon: Instagram, url: 'https://instagram.com' },
-    { icon: Twitter, url: 'https://twitter.com' },
-    { icon: LinkedIn, url: 'https://linkedin.com' }
+    { icon: Facebook, url: 'https://facebook.com/bluestart9d' },
+    { icon: Instagram, url: 'https://instagram.com/' },
+    { icon: Twitter, url: 'https://twitter.com/sinhbuidinh' },
+    { icon: LinkedIn, url: 'https://www.linkedin.com/in/sinhbui/' }
   ]
 
   return (

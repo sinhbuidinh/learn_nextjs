@@ -40,7 +40,7 @@ export function RecentPostsSection () {
           }}
           alignItems="center"
         >
-          <Typography variant="h5">Recent Posts</Typography>
+          <Typography variant="h2">Recent Posts</Typography>
           <Link passHref href="/blog">
             <MuiLink sx={{
               display: { xs: 'none', md: 'inline-block' }

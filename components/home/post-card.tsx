@@ -14,7 +14,7 @@ export function PostCard ({ post }: PostCardProps) {
     <Card>
       <CardContent>
         <Typography
-          variant="h5"
+          variant="h3"
           fontWeight="bold"
         >{post.title}</Typography>
 

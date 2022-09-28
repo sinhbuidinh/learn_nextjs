@@ -2,9 +2,9 @@ import { Container, Stack, Typography, Button } from '@mui/material';
 import { Box } from '@mui/system'
 import Image from 'next/image';
 import * as React from 'react'
-import avatar from '@/images/avatar_ex.png'
 
 export function HeroSection () {
+  const avatar = 'https://res.cloudinary.com/dflcax7yz/image/upload/v1664337503/Portfolio_SINH/ava_circle_sc8pfc.png'
   return (
     <Box
       component="section"
@@ -30,9 +30,9 @@ export function HeroSection () {
             </Typography>
 
             <Typography mb={{ xs: 3.5, md: 5 }}>
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor
-              do amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
+              More than 5 year experience for maintenance and work with big project.<br/>
+              Experience about design data, structure connection and extend project.<br/><br/>
+              Good knowledge of REST-full API, Laravel, CI 2x3x, Nodejs, ReactJs, …
             </Typography>
 
             <Button variant="contained">Download Resume</Button>
@@ -45,7 +45,14 @@ export function HeroSection () {
               borderRadius: '50%',
             }}
           >
-            <Image src={avatar} layout="responsive" alt="avatar" priority="true" />
+            <Image
+              src={avatar}
+              alt="avatar"
+              width={240}
+              height={240}
+              layout="fixed"
+              loading="lazy"
+            />
           </Box>
         </Stack>
       </Container>
