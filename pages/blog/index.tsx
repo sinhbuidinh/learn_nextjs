@@ -26,7 +26,7 @@ export default function BlogListPage ({ posts }: BlogListPageProps) {
               }}
             >
               {posts.map(post => <li key={post.id}>
-                <Link href={`/blog/${post.id}`}>
+                <Link href={`/blog/${post.slug}`}>
                   <a>
                     <PostItem post={post} />
                   </a>
