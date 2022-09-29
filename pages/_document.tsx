@@ -1,7 +1,7 @@
-import * as React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import createEmotionServer from '@emotion/server/create-instance';
-import { theme, createEmotionCache } from '@/utils';
+import * as React from 'react'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+import createEmotionServer from '@emotion/server/create-instance'
+import { theme, createEmotionCache } from '@/utils'
 
 export default class MyDocument extends Document {
   render() {
@@ -19,8 +19,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;600;800&display=swap"
             rel="stylesheet"
           />
-          <meta name="emotion-insertion-point" content="" />
-          {(this.props as any).emotionStyleTags}
         </Head>
         <body>
           <Main />

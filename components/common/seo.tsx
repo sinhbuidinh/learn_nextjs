@@ -14,10 +14,11 @@ export interface ISeoProps {
 
 export function Seo ({ data }: ISeoProps) {
   const { title, description, url, thumbnailUrl } = data
+  const titlePage = `${process.env.PREFIX_TITLE ?? 'SINH - Fullstack'} | ${title}`
 
   return (
     <Head>
-      <title>SINH - Fullstack | {title}</title>
+      <title>{titlePage}</title>
       <meta name="title"
         content={title} />
       <meta

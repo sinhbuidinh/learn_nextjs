@@ -26,7 +26,7 @@ export function HeroSection () {
               mb={{ xs: 3.5, md: 5 }}
             >
               Hi, I am Sinh, <br/>
-              Full-stack Developer
+              Full-stack Engineer
             </Typography>
 
             <Typography mb={{ xs: 3.5, md: 5 }}>

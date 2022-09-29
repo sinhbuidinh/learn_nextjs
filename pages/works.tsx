@@ -1,4 +1,4 @@
-import { MainLayout } from '@/components/layouts';
+import { MainLayout } from '@/components/layouts'
 import * as React from 'react'
 
 export interface WorksPageProps {}
