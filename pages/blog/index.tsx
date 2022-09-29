@@ -11,11 +11,16 @@ export interface BlogListPageProps {
 export default function BlogListPage ({ posts }: BlogListPageProps) {
   return (<>
     <div>Blog List</div>
-    <ul>
-      {posts.map(post => <li key={post.id}>
-        <Link href={`/posts/${post.id}`}><a>{post.title}</a></Link>
-      </li>)}
-    </ul>
+    {(posts && posts.length > 0)
+      ? (
+        <ul>
+          {posts.map(post => <li key={post.id}>
+            <Link href={`/posts/${post.id}`}><a>{post.title}</a></Link>
+          </li>)}
+        </ul>
+      )
+      : ''
+    }
   </>);
 }
 
@@ -27,7 +32,7 @@ export const getStaticProps: GetStaticProps<BlogListPageProps> = async () => {
 
   return {
     props: {
-      posts: data.map((x: any) => ({id: x.id ?? '', title: x.title ?? ''})),
+      posts: data && data.length > 0 ? data.map((x: any) => ({id: x.id ?? '', title: x.title ?? ''})) : [],
     }
   }
 }
