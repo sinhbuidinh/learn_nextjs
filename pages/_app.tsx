@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/prism.css'
 
 import { EmptyLayout } from '@/components/layouts'
 import { AppPropsWithLayout } from '@/models'

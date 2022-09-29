@@ -4,10 +4,15 @@ import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 import { Box, Container } from '@mui/material'
 import rehypeDocument from 'rehype-document'
 import rehypeFormat from 'rehype-format'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeStringify from 'rehype-stringify/lib'
 import remarkParse from 'remark-parse/lib'
 import remarkRehype from 'remark-rehype'
+import remarkPrism from 'remark-prism'
+import remarkToc from 'remark-toc'
 import { unified } from 'unified'
+import Script from 'next/script'
 
 export interface BlogPageProps {
   post: Post
@@ -21,9 +26,9 @@ export default function PostDetailPage({ post }: BlogPageProps) {
       <Container>
         <p>{post.title}</p>
         <p>{post.author?.name}</p>
-        <p>{post.description}</p>
         <div dangerouslySetInnerHTML={{ __html: post.htmlContent || '' }}></div>
       </Container>
+      <Script src="/prism.js" strategy="afterInteractive"></Script>
     </Box>
   )
 }
@@ -51,7 +56,11 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async (
 
   const html = await unified()
     .use(remarkParse)
+    .use(remarkToc, { heading: process.env.TOC_HEADING || 'TOC' })
+    .use(remarkPrism, { plugins: ['line-numbers'] })
     .use(remarkRehype)
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
     .use(rehypeDocument, { title: 'Blog details page' })
     .use(rehypeFormat)
     .use(rehypeStringify)
