@@ -32,7 +32,6 @@ export async function getBlogList(): Promise<Post[]> {
       publishedDate: data.date,
       description: excerpt || '',
       mdContent: content,
-      // thumbnailUrl: data.image || null,
     })
   }
 
