@@ -5,6 +5,7 @@ author: Hậu Nguyễn
 author_title: Senior Software Engineer at fram^
 author_url: https://github.com/paulnguyen-mn
 author_image_url: https://avatars3.githubusercontent.com/u/31444102?s=400&u=c545a527aa31843e1361462e410c0f51863e8e26&v=4
+image: https://res.cloudinary.com/dflcax7yz/image/upload/v1664532606/Portfolio_SINH/git_svqcyd.png
 tags: [git, git trong dự án thực tế]
 date: '2022-09-29T09:43:00Z'
 ---

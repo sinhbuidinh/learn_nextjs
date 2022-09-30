@@ -2,7 +2,6 @@ import path from 'path'
 import fs from 'fs'
 import { Post } from '@/models'
 import matter from 'gray-matter'
-import { format } from 'date-fns'
 
 const BLOG_MD_FOLDER = path.join(process.cwd(), 'blog')
 
@@ -22,6 +21,7 @@ export async function getBlogList(): Promise<Post[]> {
       id: fileName,
       slug: data.slug,
       title: data.title,
+      thumbnailUrl: data.image || '',
       author: {
         name: data.author,
         title: data.author_title,
