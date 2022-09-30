@@ -54,7 +54,7 @@ Nếu như mọi người chưa biết Javascript là gì, thì mình khuyên c�
 - Bắt đầu tạo project:
   - Dùng tool `Create React App` để tạo một ReactJS project mẫu: [https://create-react-app.dev/docs/getting-started/](https://create-react-app.dev/docs/getting-started/)
 
-Tada xong tới đây là bạn phải chạy lên được cái website đơn giản của ReactJS rồi đó. <br/>
+Tada xong tới đây là bạn phải chạy lên được cái website đơn giản của ReactJS rồi đó.  
 Giờ học code ReactJS thôi hehe 😎
 
 ### 1. Kiến thức nền tảng
@@ -242,6 +242,6 @@ Rất nhiều link tham khảo về các thư viện làm việc về ReactJS đ
 
 > CẢNH BÁO: Lạc lối do nhiều links tham khảo quá 🤣
 
-Những thông tin mình ghi nhận trong bài này là từ kinh nghiệm cá nhân, nên sẽ có phần thiếu sót, mọi người hãy cùng bổ sung, đóng góp cho nó hoàn chỉnh nhé. <br/>
+Những thông tin mình ghi nhận trong bài này là từ kinh nghiệm cá nhân, nên sẽ có phần thiếu sót, mọi người hãy cùng bổ sung, đóng góp cho nó hoàn chỉnh nhé.  
 Cảm ơn mọi người rất nhiều nè ❤️
 

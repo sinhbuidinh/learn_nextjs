@@ -1,14 +1,12 @@
+export const BLOG_ROUTE_PATH = '/blog'
+
 export const ROUTE_LIST = [
   {
     label: 'Home',
     path: '/',
   },
   {
-    label: 'Works',
-    path: '/works',
-  },
-  {
     label: 'Blog',
-    path: '/blog',
+    path: BLOG_ROUTE_PATH,
   }
 ]

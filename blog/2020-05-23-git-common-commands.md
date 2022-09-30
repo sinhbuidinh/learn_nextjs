@@ -27,24 +27,24 @@ git checkout develop # switch sang nhánh develop
 git pull # lấy code mới nhất về
 ```
 
-## 2. Làm task trực tiếp trên nhánh develop 
-CODING CHANGES 😎
-<br />Sau khi code xong, nhờ review lại những thay đổi của mình, review cẩn thận, từ từ.
-<br />Review về coding convention.
-<br />Review về console log đã xoá chưa?
-<br />Review về imports (có dư thừa gì ko?)
-<br />Review về eslints 
-<br />Review xem chỗ nào logic phức tạp nên add thêm comment vào.
-<br />Review xem chỗ nào code nhiều if/else quá thì refactor lại.
-<br />...
-<br />Review bằng VSCode hen, cho nó dễ nhìn, còn bạn muốn cool ngầu thì cứ git diff và check nhé! 😎
-<br />Hãy tập thói quen review code của bản thân cẩn thận trước khi đưa cho lead review nhé! 😉
+## 2. Làm task trực tiếp trên nhánh develop
+**CODING CHANGES 😎**  
+Sau khi code xong, nhờ review lại những thay đổi của mình, review cẩn thận, từ từ.  
+Review về coding convention.  
+Review về console log đã xoá chưa?  
+Review về imports (có dư thừa gì ko?)  
+Review về eslints  
+Review xem chỗ nào logic phức tạp nên add thêm comment vào.  
+Review xem chỗ nào code nhiều if/else quá thì refactor lại.  
+...  
+Review bằng VSCode hen, cho nó dễ nhìn, còn bạn muốn cool ngầu thì cứ git diff và check nhé! 😎  
+Hãy tập thói quen review code của bản thân cẩn thận trước khi đưa cho lead review nhé! 😉  
 
 ## 3. Chuẩn bị tạo Pull Request (PR)
 
-> Sau khi đã code xong, giờ chuẩn bị tạo PR
-> <br />Nhưng có thể trong lúc mình làm, ai đó đã update thêm lên nhánh develop rồi.
-> <br />Nên mình phải lấy code mới nhất trên nhánh develop rồi mới apply cái changes của mình.
+> Sau khi đã code xong, giờ chuẩn bị tạo PR  
+> Nhưng có thể trong lúc mình làm, ai đó đã update thêm lên nhánh develop rồi.  
+> Nên mình phải lấy code mới nhất trên nhánh develop rồi mới apply cái changes của mình.  
 
 ```sh
 git add . # chấp nhận tất cả changes
@@ -80,11 +80,16 @@ git commit -m "[123] Add address ui
 - Keep it short and descriptive"
 ```
 
-> 📝Lưu ý chỗ chữ màu vàng
-> <br/> - Dòng đầu tiên là title
-> <br/> - Dòng thứ 2 là empty ( BẮT BUỘC ) 
-> <br/> - Dòng thứ 3 trở đi là dòng mô tả thêm về Pull Request của mình.
-> <br/> Convention này nó giúp bạn tự động điền title, description vào ô tương ứng trên Github, Gitlab, Bitbucket, ...
+
+**📝LƯU Ý**
+
+chỗ chữ màu vàng
+
+- Dòng đầu tiên là title
+- Dòng thứ 2 là empty ( BẮT BUỘC ) 
+- Dòng thứ 3 trở đi là dòng mô tả thêm về Pull Request của mình.
+
+Convention này nó giúp bạn tự động điền title, description vào ô tương ứng trên Github, Gitlab, Bitbucket, ...
 
 ## 7. Push code lên remote repository (Github, Gitlab, Bitbucket, ...)
 

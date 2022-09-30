@@ -13,6 +13,7 @@ import remarkPrism from 'remark-prism'
 import remarkToc from 'remark-toc'
 import { unified } from 'unified'
 import Script from 'next/script'
+import { MainLayout } from '@/components/layouts'
 
 export interface BlogPageProps {
   post: Post
@@ -24,7 +25,7 @@ export default function PostDetailPage({ post }: BlogPageProps) {
   return (
     <Box>
       <Container>
-        <p>{post.title}</p>
+        <h1>{post.title}</h1>
         <p>{post.author?.name}</p>
         <div dangerouslySetInnerHTML={{ __html: post.htmlContent || '' }}></div>
       </Container>
@@ -32,6 +33,8 @@ export default function PostDetailPage({ post }: BlogPageProps) {
     </Box>
   )
 }
+
+PostDetailPage.Layout = MainLayout
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const postList = await getBlogList()
@@ -66,6 +69,10 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async (
     .use(rehypeStringify)
     .process(post.mdContent || '')
   post.htmlContent = html.toString()
+
+  // if (slug == 'git-dung-trong-du-an-thuc-te') {
+  //   console.log(html)
+  // }
 
   return {
     props: {
