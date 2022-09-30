@@ -154,7 +154,7 @@ Cái này thì đa dạng lắm nên mình không biết sẽ bị hỏi về v�
 
 --- 
 
-Hi vọng bài chia sẻ này hữu ích với mọi người! <br/>
-Chúc các bạn có một buổi phỏng vấn thành công tốt đẹp nhé! 🎉 <br/>
+Hi vọng bài chia sẻ này hữu ích với mọi người!  
+Chúc các bạn có một buổi phỏng vấn thành công tốt đẹp nhé! 🎉  
 
 > From Easy Frontend with ❤️

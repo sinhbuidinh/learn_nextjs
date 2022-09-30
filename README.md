@@ -6,6 +6,7 @@ First, add some ENV
 ```
 EXCERPT_SERPARATOR="<!-- truncate-->"
 PREFIX_TITLE="SINH - Fullstack Engineer"
+TOC_HEADING="Table of contents"
 ```
 
 Second run the development server:

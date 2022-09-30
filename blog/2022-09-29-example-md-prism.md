@@ -17,7 +17,7 @@ Khi nhắc tới prism có khá là nhiều plugin hay ho. Hãy cùng mình khá
 
 ## 0. Line number
 - More detail here: https://prismjs.com/plugins/line-numbers/
-<br />Example:
+Example:  
 
 ```tsx[class="line-numbers"]
 function App() {
@@ -29,8 +29,8 @@ function App() {
 
 ## 1. Highlight line code
 
-- More detail here: https://prismjs.com/plugins/line-highlight/
-<br />Example:
+- More detail here: https://prismjs.com/plugins/line-highlight/  
+Example:
 
 ```tsx[data-line="2-5,10"]
 (function () {
