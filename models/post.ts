@@ -16,4 +16,5 @@ export interface Post {
   author?: Author
   mdContent?: string
   htmlContent?: string
+  thumbnailUrl?: string
 }

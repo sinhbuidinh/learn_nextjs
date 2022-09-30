@@ -14,6 +14,8 @@ import remarkToc from 'remark-toc'
 import { unified } from 'unified'
 import Script from 'next/script'
 import { MainLayout } from '@/components/layouts'
+import { Seo } from '@/components/common'
+import { BLOG_ROUTE_PATH } from '@/components/common/header/routes'
 
 export interface BlogPageProps {
   post: Post
@@ -24,6 +26,15 @@ export default function PostDetailPage({ post }: BlogPageProps) {
 
   return (
     <Box>
+      <Seo
+        data={{
+          title: `${post.title} | ${post.author?.name}`,
+          description: post.description,
+          url: `${process.env.HOST_URL}${BLOG_ROUTE_PATH}/${post.slug}`,
+          thumbnailUrl: post.thumbnailUrl || 'https://res.cloudinary.com/dflcax7yz/image/upload/v1664533130/Portfolio_SINH/write_blog_yt9xi7.jpg',
+        }}
+      />
+
       <Container>
         <h1>{post.title}</h1>
         <p>{post.author?.name}</p>
@@ -69,10 +80,6 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async (
     .use(rehypeStringify)
     .process(post.mdContent || '')
   post.htmlContent = html.toString()
-
-  // if (slug == 'git-dung-trong-du-an-thuc-te') {
-  //   console.log(html)
-  // }
 
   return {
     props: {

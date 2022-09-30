@@ -5,6 +5,7 @@ author: Sinh Bui
 author_title: Senior Software Engineer at Hello Health Group
 author_url: https://github.com/sinhbuidinh
 author_image_url: https://res.cloudinary.com/dflcax7yz/image/upload/v1664337503/Portfolio_SINH/ava_circle_sc8pfc.png
+image: https://res.cloudinary.com/dflcax7yz/image/upload/v1664532606/Portfolio_SINH/markdown_g4occz.jpg
 tags: [markdown, md file, prismjs]
 date: '2022-09-29T09:43:00Z'
 ---

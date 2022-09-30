@@ -11,7 +11,7 @@ const Home: NextPageWithLayout = () => {
         data={{
           title: 'Profile',
           description: 'Experience with NodeJS and PHP. Interested with both FE and BE',
-          url: 'https://sinh-portfolio.vercel.app/',
+          url: process.env.HOST_URL || '',
           thumbnailUrl: 'https://res.cloudinary.com/dflcax7yz/image/upload/v1664337503/Portfolio_SINH/ava_circle_sc8pfc.png',
         }}
       />

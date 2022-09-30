@@ -4,9 +4,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, add some ENV
 ```
+API_URL="https://js-post-api.herokuapp.com"
 EXCERPT_SERPARATOR="<!-- truncate-->"
 PREFIX_TITLE="SINH - Fullstack Engineer"
 TOC_HEADING="Table of contents"
+HOST_URL="https://sinh-portfolio.vercel.app/"
 ```
 
 Second run the development server:

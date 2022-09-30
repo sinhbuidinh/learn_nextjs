@@ -5,6 +5,7 @@ author: Hậu Nguyễn
 author_title: Senior Software Engineer at fram^
 author_url: https://github.com/paulnguyen-mn
 author_image_url: https://avatars3.githubusercontent.com/u/31444102?s=400&u=c545a527aa31843e1361462e410c0f51863e8e26&v=4
+image: https://res.cloudinary.com/dflcax7yz/image/upload/v1664532606/Portfolio_SINH/learn-reactjs_r7j5jh.jpg
 tags: [reactjs, lộ trình học reactjs cơ bản]
 date: '2022-08-15T10:20:00Z'
 ---
