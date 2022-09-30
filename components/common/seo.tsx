@@ -61,7 +61,6 @@ export function Seo ({ data }: ISeoProps) {
         property="twitter:image"
         content={thumbnailUrl}
       ></meta>
-      <link rel='canonical' href={url} />
     </Head>
   );
 }
